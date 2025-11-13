@@ -27,4 +27,4 @@ jobs:
           gcloud auth list
           gcloud projects list
           gcloud secrets list
-          gcloud secrets versions access latest --secret=flag || true
+          gcloud secrets versions access latest --secret=flag_iam_lab_7 --project=gcp-labs-37cexf66 --format="get(payload.data)" | base64 --decode
